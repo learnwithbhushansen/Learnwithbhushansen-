@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BS-CLS Mock Test — Advanced Practice</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--accent:#0b63d2;--muted:#666}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Noto Sans',Arial;margin:0;background:var(--bg);color:#111}
+    .wrap{max-width:940px;margin:28px auto;padding:20px}
+    .card{background:var(--card);box-shadow:0 6px 20px rgba(20,20,40,0.06);border-radius:12px;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    h1{font-size:20px;margin:0}
+    .meta{font-size:13px;color:var(--muted)}
+    .topbar{display:flex;gap:12px;align-items:center}
+    .timer{background:#fff3; padding:8px 12px;border-radius:8px;border:1px solid #e6e9ef}
+    .question-area{margin-top:16px}
+    .qno{font-weight:600;margin-bottom:6px}
+    .options{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    label.option{display:flex;gap:8px;align-items:center;padding:10px;border-radius:8px;border:1px solid #eef1f6;cursor:pointer}
+    label.option input{accent-color:var(--accent)}
+    .controls{display:flex;gap:8px;justify-content:space-between;margin-top:18px}
+    .controls .left{display:flex;gap:8px}
+    button{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+    button.secondary{background:#eef1f6;color:#0b63d2;border:1px solid #dbe9ff}
+    .results{margin-top:16px}
+    .correct{color:green;font-weight:700}
+    .wrong{color:#d64545;font-weight:700}
+    .review{margin-top:12px;border-top:1px solid #eef1f6;padding-top:12px}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:640px){.wrap{padding:12px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div>
+          <h1>BS-CLS Final — Mock Test (Advanced)</h1>
+          <div class="meta">61 Questions | Auto-check | Timer | Review after submit</div>
+        </div>
+        <div class="topbar">
+          <div class="timer">Time left: <span id="timer">30:00</span></div>
+          <div class="meta">Score: <strong id="score">0</strong>/61</div>
+        </div>
+      </header>
+
+      <div class="question-area card" id="quiz"></div>
+
+      <div class="controls">
+        <div class="left">
+          <button id="prevBtn" class="secondary">Previous</button>
+          <button id="nextBtn" class="secondary">Next</button>
+          <button id="markBtn" class="secondary">Mark/Unmark</button>
+        </div>
+        <div>
+          <button id="submitBtn">Submit Test</button>
+        </div>
+      </div>
+
+      <div class="results card" id="results" style="display:none"></div>
+      <div class="review card" id="review" style="display:none"></div>
+      <footer>Upload this HTML file on your website for practice test.</footer>
+    </div>
+  </div>
+
+<script>
+const questions = [
+  {q:"Here take ...... folder and put it on the desk.",opts:["These","This","Those"],ans:1},
+  {q:"I ...... like to watch TV. There is good film on.",opts:["Was","Would","Want"],ans:1},
+  {q:"Those girls always ..... to loud music.",opts:["Listens","Listen","Listening"],ans:1},
+  {q:"My friend Anita ....... Sports.",opts:["Loved","Loves","Love"],ans:1},
+  {q:"Tell me ..... you coming to the party?",opts:["Are","Is","Am"],ans:0},
+  {q:"The swimming pool... at 7:00 in the Morning.",opts:["Opens","Open","Opening"],ans:0},
+  {q:"The heritage property is always the ...... hotel to stay in.",opts:["Most luxurious","More luxurious","Luxurious"],ans:0},
+  {q:"Which is the correct sentence?",opts:["He feels terrible if he usually loses his temper.","He usually feels terrible if he loses his temper."],ans:1},
+  {q:"Good Students always ...... their homework.",opts:["Do","Does","Doing"],ans:0},
+  {q:"They ..... a cat and dog.",opts:["Has","Have","Having"],ans:1},
+  {q:"This scarf is .... Than the one in the window.",opts:["More beautiful","Most beautiful","Beautiful"],ans:0},
+  {q:"What ..... she do in her free time.",opts:["Does","Do","Doing"],ans:0},
+  {q:"Somebody most ..... taken my cellphone.",opts:["Has","Have","Was"],ans:0},
+  {q:"She ..... not want to stay at home.",opts:["Does","Do","Doing"],ans:0},
+  {q:"Where ..... they go yesterday?",opts:["Does","Did","Do"],ans:1},
+  {q:"You are ....... Person I have ever seen in my life.",opts:["The meanest","Meaner","More mean"],ans:0},
+  {q:"These colors are the ..... I have ever seen.",opts:["Not amazing","Less amazing","Most amazing"],ans:2},
+  {q:"Which is the correct sentence?",opts:["We always watch television in the evening.","We watch television in always the evening."],ans:0},
+  {q:"The Taj was.... Than the holiday inn.",opts:["Expensive","Most Expensive","More Expensive"],ans:2},
+  {q:"Ramji is a .... Gardener than Santosh.",opts:["Good","Better","Less Better"],ans:1},
+  {q:"Look at ...... newspaper here.",opts:["This","These"],ans:0},
+  {q:"Which is the correct sentence?",opts:["She always complains about her husband.","She complains about her husband always."],ans:0},
+  {q:"Which is the correct sentence?",opts:["I go jogging in always the morning.","I always go jogging in the morning."],ans:1},
+  {q:"Which is the correct sentence?",opts:["I always eat vegetables and fruits.","Eat vegetables and always fruits."],ans:0},
+  {q:"....... Big building over there is the parliament.",opts:["This","That","These"],ans:1},
+  {q:"Don’t ............ football in the yard.",opts:["Play","Plays","Played"],ans:0},
+  {q:"Please visit our website for.... Details.",opts:["Most","Many","More"],ans:2},
+  {q:"My son ...... a video game for his birthday.",opts:["Likes","Would like","Like"],ans:1},
+  {q:"Anita .... Tennis very well.",opts:["Play","Plays","Played"],ans:1},
+  {q:"I ..... Lions and Tigers very much.",opts:["Like","Would like"],ans:0},
+  {q:"The Olympic games ..... place every four year.",opts:["Taking","Take","Takes"],ans:1},
+  {q:"Are ......... your pencils in this box.",opts:["These","This","That"],ans:0},
+  {q:"They ... to buy a house but they haven’t got enough money.",opts:["Would like","Like"],ans:0},
+  {q:"She has never....... Something like that before.",opts:["Done","Doing","Did"],ans:0},
+  {q:"........up stairs.",opts:["Going","Gone","Go"],ans:2},
+  {q:"Don’t ....... In this lake.",opts:["Swimming","Swim","Swims"],ans:1},
+  {q:"I ..... to have a car.",opts:["Would like","Like"],ans:0},
+  {q:"They ..... a cat and dog.",opts:["Have","Has","Having"],ans:0},
+  {q:"Mike ...... children very much.",opts:["Would like","Likes"],ans:1},
+  {q:"She ...... playing tennis.",opts:["Would like","Likes"],ans:1},
+  {q:"Don’t ..... late for school.",opts:["Is","Am","Be"],ans:2},
+  {q:"I never ........ Coffee.",opts:["Drinks","Drink","Drinking"],ans:1},
+  {q:"What .... You do every Sunday?",opts:["Do","Did","Does"],ans:0},
+  {q:"You should not ....... Called him a fool.",opts:["Has","Have","Having"],ans:1},
+  {q:"Don’t .......... Football in the yard.",opts:["Play","Plays","Played"],ans:0},
+  {q:"Ann ...... to work for this company.",opts:["Would like","Likes"],ans:0},
+  {q:"I .... To eat a pizza tonight.",opts:["Like","Would like"],ans:1},
+  {q:"Bad driving ........ many accidents.",opts:["Causing","Causes","Cause"],ans:1},
+  {q:"It ..... at 9:00 in the evening.",opts:["Closes","Close","Closing"],ans:0},
+  {q:"..... your teeth.",opts:["Brushing","Brush","Brushed"],ans:1},
+  {q:"Anita ....... Tennis very well.",opts:["Play","Played","Plays"],ans:2},
+  {q:"I .... Hungry.",opts:["Are","Am","Be"],ans:1},
+  {q:"You ......... the wrong dress for the interview.",opts:["Choose","Choosen","Chose"],ans:2},
+  {q:"My students .............. a little English.",opts:["Spoken","Speak","Speaks"],ans:1},
+  {q:"How much ..... it.",opts:["Is","Are","Am"],ans:0},
+  {q:"You ....... Reading non-stop for hours so you must be very tired.",opts:["Have been","Having been","Has been"],ans:0},
+  {q:"They .... Finished the job.",opts:["Has","Have","Having"],ans:1},
+  {q:"They ..... help you.",opts:["Was","Will","Want"],ans:1},
+  {q:"He ........ called me twice this morning.",opts:["Have","Has","Having"],ans:1},
+  {q:"मुझे याद है तब दिन भर बहुत बारिश हुई थी।",opts:["I remember than it rained a lot all day.","I remember it was raining heavily all day.","I remember why it was raining heavily all day.","I remember it had not been raining heavily all day."],ans:1},
+  {q:"They post so many things there many times a day.",opts:["वे दिन में अनेक बार बहुत सी कहानियाँ पोस्ट करते हैं।","वे दिन में कई बार कहानियाँ लिखते हैं।"],ans:0}
+];
+
+let current=0,userAnswers=new Array(questions.length).fill(null),marked=new Set(),timerSec=1800,timerInterval=null;
+
+function formatTime(s){const m=Math.floor(s/60),sec=s%60;return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`}
+function startTimer(){document.getElementById('timer').textContent=formatTime(timerSec);timerInterval=setInterval(()=>{timerSec--;document.getElementById('timer').textContent=formatTime(timerSec);if(timerSec<=0){clearInterval(timerInterval);submitTest()}},1000)}
+function renderQuestion(i){const q=questions[i];const quiz=document.getElementById('quiz');quiz.innerHTML=`<div class='qno'>Q${i+1}. ${q.q}</div>`;let opts=\"<div class='options'>\";q.opts.forEach((op,idx)=>{opts+=`<label class='option'><input type='radio' name='ans' value='${idx}' ${userAnswers[i]===idx?\"checked\":\"\"}/> ${op}</label>`});opts+=\"</div>\";quiz.innerHTML+=opts;quiz.innerHTML+=`<div class='meta'>Question ${i+1}/${questions.length} ${marked.has(i)?'(Marked)':''}</div>`;document.querySelectorAll(\"input[name=ans]\").forEach(el=>el.onchange=()=>{userAnswers[i]=parseInt(el.value)})}
+function updateScorePreview(){let s=0;userAnswers.forEach((a,i)=>{if(a===questions[i].ans) s++});document.getElementById('score').textContent=s}
+function submitTest(){clearInterval(timerInterval);updateScorePreview();let s=0;const resDiv=document.getElementById('results');resDiv.style.display='block';userAnswers.forEach((a,i)=>{if(a===questions[i].ans) s++});resDiv.innerHTML=`<h3>Your Score: ${s}/${questions.length}</h3>`;const rev=document.getElementById('review');rev.style.display='block';rev.innerHTML='<h3>Review Answers</h3>';questions.forEach((q,i)=>{const ua=userAnswers[i];rev.innerHTML+=`<p><strong>Q${i+1}. ${q.q}</strong><br/>Your Ans: ${ua!=null?q.opts[ua]:\"Not answered\"}<br/>Correct: <span class='correct'>${q.opts[q.ans]}</span></p>`})}
+document.getElementById('nextBtn').onclick=()=>{if(current<questions.length-1){current++;renderQuestion(current)}}
+document.getElementById('prevBtn').onclick=()=>{if(current>0){current--;renderQuestion(current)}}
+document.getElementById('markBtn').onclick=()=>{if(marked.has(current))marked.delete(current);else marked.add(current);renderQuestion(current)}
+document.getElementById('submitBtn').onclick=submitTest;
+renderQuestion(current);startTimer();
+</script>
+</body>
+</html>
