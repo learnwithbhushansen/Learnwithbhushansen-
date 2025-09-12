@@ -56,660 +56,154 @@
           <li>BS-CLS</li<section id="cls">
   <h2>CLS Final Exam Mock Test</h2>
   <!-- Current CLS content -->
-</section<section id="cls-mock-test-set1" style="padding:50px 0; background:#f1f1f1;">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:40px; color:#007BFF;">📘 BS-CLS KYP Final Exam – Mock Test (Set 1)</h2>
+  <!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BS-CLS Mock Test — Advanced Practice</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--accent:#0b63d2;--muted:#666}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Noto Sans',Arial;margin:0;background:var(--bg);color:#111}
+    .wrap{max-width:940px;margin:28px auto;padding:20px}
+    .card{background:var(--card);box-shadow:0 6px 20px rgba(20,20,40,0.06);border-radius:12px;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+    h1{font-size:20px;margin:0}
+    .meta{font-size:13px;color:var(--muted)}
+    .topbar{display:flex;gap:12px;align-items:center}
+    .timer{background:#fff3; padding:8px 12px;border-radius:8px;border:1px solid #e6e9ef}
+    .question-area{margin-top:16px}
+    .qno{font-weight:600;margin-bottom:6px}
+    .options{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+    label.option{display:flex;gap:8px;align-items:center;padding:10px;border-radius:8px;border:1px solid #eef1f6;cursor:pointer}
+    label.option input{accent-color:var(--accent)}
+    .controls{display:flex;gap:8px;justify-content:space-between;margin-top:18px}
+    .controls .left{display:flex;gap:8px}
+    button{background:var(--accent);color:#fff;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+    button.secondary{background:#eef1f6;color:#0b63d2;border:1px solid #dbe9ff}
+    .results{margin-top:16px}
+    .correct{color:green;font-weight:700}
+    .wrong{color:#d64545;font-weight:700}
+    .review{margin-top:12px;border-top:1px solid #eef1f6;padding-top:12px}
+    footer{margin-top:14px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:640px){.wrap{padding:12px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <div>
+          <h1>BS-CLS Final — Mock Test (Advanced)</h1>
+          <div class="meta">61 Questions | Auto-check | Timer | Review after submit</div>
+        </div>
+        <div class="topbar">
+          <div class="timer">Time left: <span id="timer">30:00</span></div>
+          <div class="meta">Score: <strong id="score">0</strong>/61</div>
+        </div>
+      </header>
 
-    <!-- Q1 -->
-    <div class="question-card">
-      <p><strong>Q1.</strong> Here take ...... folder and put it on the desk.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) These</button>
-        <button onclick="checkAnswer(this,'b')">b) This</button>
-        <button onclick="checkAnswer(this,'b')">c) Those</button>
+      <div class="question-area card" id="quiz"></div>
+
+      <div class="controls">
+        <div class="left">
+          <button id="prevBtn" class="secondary">Previous</button>
+          <button id="nextBtn" class="secondary">Next</button>
+          <button id="markBtn" class="secondary">Mark/Unmark</button>
+        </div>
+        <div>
+          <button id="submitBtn">Submit Test</button>
+        </div>
       </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) This<br>Explanation: “This” का प्रयोग पास की वस्तु (singular) के लिए होता है।</p>
-    </div>
 
-    <!-- Q2 -->
-    <div class="question-card">
-      <p><strong>Q2.</strong> I ...... like to watch TV. There is good film on.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Was</button>
-        <button onclick="checkAnswer(this,'b')">b) Would</button>
-        <button onclick="checkAnswer(this,'b')">c) Want</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Would<br>Explanation: “Would like” का प्रयोग इच्छा या polite request के लिए होता है।</p>
+      <div class="results card" id="results" style="display:none"></div>
+      <div class="review card" id="review" style="display:none"></div>
+      <footer>Upload this HTML file on your website for practice test.</footer>
     </div>
-
-    <!-- Q3 -->
-    <div class="question-card">
-      <p><strong>Q3.</strong> Those girls always ..... to loud music.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Listens</button>
-        <button onclick="checkAnswer(this,'b')">b) Listen</button>
-        <button onclick="checkAnswer(this,'b')">c) Listening</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Listen<br>Explanation: Subject plural है → verb भी plural “listen” होगा।</p>
-    </div>
-
-    <!-- Q4 -->
-    <div class="question-card">
-      <p><strong>Q4.</strong> My friend Anita ....... Sports.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Loved</button>
-        <button onclick="checkAnswer(this,'b')">b) Loves</button>
-        <button onclick="checkAnswer(this,'b')">c) Love</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Loves<br>Explanation: Singular subject Anita के साथ present simple verb में “-s” लगता है।</p>
-    </div>
-
-    <!-- Q5 -->
-    <div class="question-card">
-      <p><strong>Q5.</strong> Tell me ..... you coming to the party?</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Are</button>
-        <button onclick="checkAnswer(this,'a')">b) Is</button>
-        <button onclick="checkAnswer(this,'a')">c) Am</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Are<br>Explanation: सही structure है → “Are you coming…?”</p>
-    </div>
-
-    <!-- Q6 -->
-    <div class="question-card">
-      <p><strong>Q6.</strong> The swimming pool... at 7:00 in the Morning.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Opens</button>
-        <button onclick="checkAnswer(this,'a')">b) Open</button>
-        <button onclick="checkAnswer(this,'a')">c) Opening</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Opens<br>Explanation: Daily routine facts present simple में होते हैं।</p>
-    </div>
-
-    <!-- Q7 -->
-    <div class="question-card">
-      <p><strong>Q7.</strong> The heritage property is always the ...... hotel to stay in.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Most luxurious</button>
-        <button onclick="checkAnswer(this,'a')">b) More luxurious</button>
-        <button onclick="checkAnswer(this,'a')">c) Luxurious</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Most luxurious<br>Explanation: Superlative degree के लिए “the most luxurious” सही है।</p>
-    </div>
-
-    <!-- Q8 -->
-    <div class="question-card">
-      <p><strong>Q8.</strong> Which is the correct sentence?</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) He feels terrible if he usually loses his temper.</button>
-        <button onclick="checkAnswer(this,'b')">b) He usually feels terrible if he loses his temper.</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b<br>Explanation: Adverb “usually” subject और verb के बीच आता है।</p>
-    </div>
-
-    <!-- Q9 -->
-    <div class="question-card">
-      <p><strong>Q9.</strong> Good Students always ...... their homework.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Do</button>
-        <button onclick="checkAnswer(this,'a')">b) Does</button>
-        <button onclick="checkAnswer(this,'a')">c) Doing</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Do<br>Explanation: Plural subject (students) → plural verb “do”।</p>
-    </div>
-
-    <!-- Q10 -->
-    <div class="question-card">
-      <p><strong>Q10.</strong> They ..... a cat and dog.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Has</button>
-        <button onclick="checkAnswer(this,'b')">b) Have</button>
-        <button onclick="checkAnswer(this,'b')">c) Having</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Have<br>Explanation: “They” plural subject है → verb plural “have” होगा।</p>
-    </div>
-
   </div>
-</section>
 
 <script>
-function checkAnswer(btn, correctOption) {
-  let siblings = btn.parentElement.querySelectorAll("button");
-  siblings.forEach(b => {
-    b.style.backgroundColor = "#007BFF";
-    b.style.color = "#fff";
-  });
+const questions = [
+  {q:"Here take ...... folder and put it on the desk.",opts:["These","This","Those"],ans:1},
+  {q:"I ...... like to watch TV. There is good film on.",opts:["Was","Would","Want"],ans:1},
+  {q:"Those girls always ..... to loud music.",opts:["Listens","Listen","Listening"],ans:1},
+  {q:"My friend Anita ....... Sports.",opts:["Loved","Loves","Love"],ans:1},
+  {q:"Tell me ..... you coming to the party?",opts:["Are","Is","Am"],ans:0},
+  {q:"The swimming pool... at 7:00 in the Morning.",opts:["Opens","Open","Opening"],ans:0},
+  {q:"The heritage property is always the ...... hotel to stay in.",opts:["Most luxurious","More luxurious","Luxurious"],ans:0},
+  {q:"Which is the correct sentence?",opts:["He feels terrible if he usually loses his temper.","He usually feels terrible if he loses his temper."],ans:1},
+  {q:"Good Students always ...... their homework.",opts:["Do","Does","Doing"],ans:0},
+  {q:"They ..... a cat and dog.",opts:["Has","Have","Having"],ans:1},
+  {q:"This scarf is .... Than the one in the window.",opts:["More beautiful","Most beautiful","Beautiful"],ans:0},
+  {q:"What ..... she do in her free time.",opts:["Does","Do","Doing"],ans:0},
+  {q:"Somebody most ..... taken my cellphone.",opts:["Has","Have","Was"],ans:0},
+  {q:"She ..... not want to stay at home.",opts:["Does","Do","Doing"],ans:0},
+  {q:"Where ..... they go yesterday?",opts:["Does","Did","Do"],ans:1},
+  {q:"You are ....... Person I have ever seen in my life.",opts:["The meanest","Meaner","More mean"],ans:0},
+  {q:"These colors are the ..... I have ever seen.",opts:["Not amazing","Less amazing","Most amazing"],ans:2},
+  {q:"Which is the correct sentence?",opts:["We always watch television in the evening.","We watch television in always the evening."],ans:0},
+  {q:"The Taj was.... Than the holiday inn.",opts:["Expensive","Most Expensive","More Expensive"],ans:2},
+  {q:"Ramji is a .... Gardener than Santosh.",opts:["Good","Better","Less Better"],ans:1},
+  {q:"Look at ...... newspaper here.",opts:["This","These"],ans:0},
+  {q:"Which is the correct sentence?",opts:["She always complains about her husband.","She complains about her husband always."],ans:0},
+  {q:"Which is the correct sentence?",opts:["I go jogging in always the morning.","I always go jogging in the morning."],ans:1},
+  {q:"Which is the correct sentence?",opts:["I always eat vegetables and fruits.","Eat vegetables and always fruits."],ans:0},
+  {q:"....... Big building over there is the parliament.",opts:["This","That","These"],ans:1},
+  {q:"Don’t ............ football in the yard.",opts:["Play","Plays","Played"],ans:0},
+  {q:"Please visit our website for.... Details.",opts:["Most","Many","More"],ans:2},
+  {q:"My son ...... a video game for his birthday.",opts:["Likes","Would like","Like"],ans:1},
+  {q:"Anita .... Tennis very well.",opts:["Play","Plays","Played"],ans:1},
+  {q:"I ..... Lions and Tigers very much.",opts:["Like","Would like"],ans:0},
+  {q:"The Olympic games ..... place every four year.",opts:["Taking","Take","Takes"],ans:1},
+  {q:"Are ......... your pencils in this box.",opts:["These","This","That"],ans:0},
+  {q:"They ... to buy a house but they haven’t got enough money.",opts:["Would like","Like"],ans:0},
+  {q:"She has never....... Something like that before.",opts:["Done","Doing","Did"],ans:0},
+  {q:"........up stairs.",opts:["Going","Gone","Go"],ans:2},
+  {q:"Don’t ....... In this lake.",opts:["Swimming","Swim","Swims"],ans:1},
+  {q:"I ..... to have a car.",opts:["Would like","Like"],ans:0},
+  {q:"They ..... a cat and dog.",opts:["Have","Has","Having"],ans:0},
+  {q:"Mike ...... children very much.",opts:["Would like","Likes"],ans:1},
+  {q:"She ...... playing tennis.",opts:["Would like","Likes"],ans:1},
+  {q:"Don’t ..... late for school.",opts:["Is","Am","Be"],ans:2},
+  {q:"I never ........ Coffee.",opts:["Drinks","Drink","Drinking"],ans:1},
+  {q:"What .... You do every Sunday?",opts:["Do","Did","Does"],ans:0},
+  {q:"You should not ....... Called him a fool.",opts:["Has","Have","Having"],ans:1},
+  {q:"Don’t .......... Football in the yard.",opts:["Play","Plays","Played"],ans:0},
+  {q:"Ann ...... to work for this company.",opts:["Would like","Likes"],ans:0},
+  {q:"I .... To eat a pizza tonight.",opts:["Like","Would like"],ans:1},
+  {q:"Bad driving ........ many accidents.",opts:["Causing","Causes","Cause"],ans:1},
+  {q:"It ..... at 9:00 in the evening.",opts:["Closes","Close","Closing"],ans:0},
+  {q:"..... your teeth.",opts:["Brushing","Brush","Brushed"],ans:1},
+  {q:"Anita ....... Tennis very well.",opts:["Play","Played","Plays"],ans:2},
+  {q:"I .... Hungry.",opts:["Are","Am","Be"],ans:1},
+  {q:"You ......... the wrong dress for the interview.",opts:["Choose","Choosen","Chose"],ans:2},
+  {q:"My students .............. a little English.",opts:["Spoken","Speak","Speaks"],ans:1},
+  {q:"How much ..... it.",opts:["Is","Are","Am"],ans:0},
+  {q:"You ....... Reading non-stop for hours so you must be very tired.",opts:["Have been","Having been","Has been"],ans:0},
+  {q:"They .... Finished the job.",opts:["Has","Have","Having"],ans:1},
+  {q:"They ..... help you.",opts:["Was","Will","Want"],ans:1},
+  {q:"He ........ called me twice this morning.",opts:["Have","Has","Having"],ans:1},
+  {q:"मुझे याद है तब दिन भर बहुत बारिश हुई थी।",opts:["I remember than it rained a lot all day.","I remember it was raining heavily all day.","I remember why it was raining heavily all day.","I remember it had not been raining heavily all day."],ans:1},
+  {q:"They post so many things there many times a day.",opts:["वे दिन में अनेक बार बहुत सी कहानियाँ पोस्ट करते हैं।","वे दिन में कई बार कहानियाँ लिखते हैं।"],ans:0}
+];
 
-  if(btn.textContent.trim().startsWith(correctOption)) {
-    btn.style.backgroundColor = "#28A745"; // Green tick
-    btn.style.color = "#fff";
-  } else {
-    btn.style.backgroundColor = "#DC3545"; // Red cross
-    btn.style.color = "#fff";
-  }
+let current=0,userAnswers=new Array(questions.length).fill(null),marked=new Set(),timerSec=1800,timerInterval=null;
 
-  btn.parentElement.parentElement.querySelector(".explanation").style.display = "block";
-}
+function formatTime(s){const m=Math.floor(s/60),sec=s%60;return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`}
+function startTimer(){document.getElementById('timer').textContent=formatTime(timerSec);timerInterval=setInterval(()=>{timerSec--;document.getElementById('timer').textContent=formatTime(timerSec);if(timerSec<=0){clearInterval(timerInterval);submitTest()}},1000)}
+function renderQuestion(i){const q=questions[i];const quiz=document.getElementById('quiz');quiz.innerHTML=`<div class='qno'>Q${i+1}. ${q.q}</div>`;let opts=\"<div class='options'>\";q.opts.forEach((op,idx)=>{opts+=`<label class='option'><input type='radio' name='ans' value='${idx}' ${userAnswers[i]===idx?\"checked\":\"\"}/> ${op}</label>`});opts+=\"</div>\";quiz.innerHTML+=opts;quiz.innerHTML+=`<div class='meta'>Question ${i+1}/${questions.length} ${marked.has(i)?'(Marked)':''}</div>`;document.querySelectorAll(\"input[name=ans]\").forEach(el=>el.onchange=()=>{userAnswers[i]=parseInt(el.value)})}
+function updateScorePreview(){let s=0;userAnswers.forEach((a,i)=>{if(a===questions[i].ans) s++});document.getElementById('score').textContent=s}
+function submitTest(){clearInterval(timerInterval);updateScorePreview();let s=0;const resDiv=document.getElementById('results');resDiv.style.display='block';userAnswers.forEach((a,i)=>{if(a===questions[i].ans) s++});resDiv.innerHTML=`<h3>Your Score: ${s}/${questions.length}</h3>`;const rev=document.getElementById('review');rev.style.display='block';rev.innerHTML='<h3>Review Answers</h3>';questions.forEach((q,i)=>{const ua=userAnswers[i];rev.innerHTML+=`<p><strong>Q${i+1}. ${q.q}</strong><br/>Your Ans: ${ua!=null?q.opts[ua]:\"Not answered\"}<br/>Correct: <span class='correct'>${q.opts[q.ans]}</span></p>`})}
+document.getElementById('nextBtn').onclick=()=>{if(current<questions.length-1){current++;renderQuestion(current)}}
+document.getElementById('prevBtn').onclick=()=>{if(current>0){current--;renderQuestion(current)}}
+document.getElementById('markBtn').onclick=()=>{if(marked.has(current))marked.delete(current);else marked.add(current);renderQuestion(current)}
+document.getElementById('submitBtn').onclick=submitTest;
+renderQuestion(current);startTimer();
 </script>
+</body>
+</html>
 
-<style>
-.question-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.question-card button {
-  padding: 10px 20px;
-  margin: 5px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.question-card button:hover {
-  opacity: 0.9;
-}
-</style<section id="cls-mock-test-set2" style="padding:50px 0; background:#f9f9f9;">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:40px; color:#28A745;">📘 BS-CLS KYP Final Exam – Mock Test (Set 2)</h2>
-
-    <!-- Q11 -->
-    <div class="question-card">
-      <p><strong>Q11.</strong> This scarf is .... Than the one in the window.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) More beautiful</button>
-        <button onclick="checkAnswer(this,'a')">b) Most beautiful</button>
-        <button onclick="checkAnswer(this,'a')">c) Beautiful</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) More beautiful<br>Explanation: Comparative form चाहिए (than के साथ)।</p>
-    </div>
-
-    <!-- Q12 -->
-    <div class="question-card">
-      <p><strong>Q12.</strong> What ..... she do in her free time.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Does</button>
-        <button onclick="checkAnswer(this,'a')">b) Do</button>
-        <button onclick="checkAnswer(this,'a')">c) Doing</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Does<br>Explanation: Singular subject (she) → verb “does”।</p>
-    </div>
-
-    <!-- Q13 -->
-    <div class="question-card">
-      <p><strong>Q13.</strong> Somebody most ..... taken my cellphone.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Has</button>
-        <button onclick="checkAnswer(this,'a')">b) Have</button>
-        <button onclick="checkAnswer(this,'a')">c) Was</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Has<br>Explanation: Present perfect tense में singular subject के लिए “has taken” सही है।</p>
-    </div>
-
-    <!-- Q14 -->
-    <div class="question-card">
-      <p><strong>Q14.</strong> She ..... not want to stay at home.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Does</button>
-        <button onclick="checkAnswer(this,'a')">b) Do</button>
-        <button onclick="checkAnswer(this,'a')">c) Doing</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Does<br>Explanation: Negative form → “does not want”।</p>
-    </div>
-
-    <!-- Q15 -->
-    <div class="question-card">
-      <p><strong>Q15.</strong> Where ..... they go yesterday?</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Does</button>
-        <button onclick="checkAnswer(this,'b')">b) Did</button>
-        <button onclick="checkAnswer(this,'b')">c) Do</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Did<br>Explanation: Past tense question → “Did they go…?”</p>
-    </div>
-
-    <!-- Q16 -->
-    <div class="question-card">
-      <p><strong>Q16.</strong> You are ....... Person I have ever seen in my life.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) The meanest</button>
-        <button onclick="checkAnswer(this,'a')">b) Meaner</button>
-        <button onclick="checkAnswer(this,'a')">c) More mean</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) The meanest<br>Explanation: Superlative form सही है।</p>
-    </div>
-
-    <!-- Q17 -->
-    <div class="question-card">
-      <p><strong>Q17.</strong> These colors are the ..... I have ever seen.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Not amazing</button>
-        <button onclick="checkAnswer(this,'c')">b) Less amazing</button>
-        <button onclick="checkAnswer(this,'c')">c) Most amazing</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) Most amazing<br>Explanation: Best degree → “the most amazing”।</p>
-    </div>
-
-    <!-- Q18 -->
-    <div class="question-card">
-      <p><strong>Q18.</strong> Which is the correct sentence?</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) We always watch television in the evening.</button>
-        <button onclick="checkAnswer(this,'a')">b) We watch television in always the evening.</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a<br>Explanation: Adverb सही जगह (verb से पहले)।</p>
-    </div>
-
-    <!-- Q19 -->
-    <div class="question-card">
-      <p><strong>Q19.</strong> The Taj was.... Than the holiday inn.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Expensive</button>
-        <button onclick="checkAnswer(this,'c')">b) Most Expensive</button>
-        <button onclick="checkAnswer(this,'c')">c) More Expensive</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) More Expensive<br>Explanation: Comparative form (than के साथ)।</p>
-    </div>
-
-    <!-- Q20 -->
-    <div class="question-card">
-      <p><strong>Q20.</strong> Ramji is a .... Gardener than Santosh.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Good</button>
-        <button onclick="checkAnswer(this,'b')">b) Better</button>
-        <button onclick="checkAnswer(this,'b')">c) Less Better</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Better<br>Explanation: “Good” का comparative → “better”।</p>
-    </div>
-
-  </div>
-</section<section id="cls-mock-test-set3" style="padding:50px 0; background:#f1f1f1;">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:40px; color:#FFC107;">📘 BS-CLS KYP Final Exam – Mock Test (Set 3)</h2>
-
-    <!-- Q21 -->
-    <div class="question-card">
-      <p><strong>Q21.</strong> Look at ...... newspaper here.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) This</button>
-        <button onclick="checkAnswer(this,'a')">b) These</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) This<br>Explanation: Singular पास की चीज़ के लिए “this”।</p>
-    </div>
-
-    <!-- Q22 -->
-    <div class="question-card">
-      <p><strong>Q22.</strong> Which is the correct sentence?</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) She always complains about her husband.</button>
-        <button onclick="checkAnswer(this,'a')">b) She complains about her husband always.</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a<br>Explanation: Adverb सही जगह (verb से पहले)।</p>
-    </div>
-
-    <!-- Q23 -->
-    <div class="question-card">
-      <p><strong>Q23.</strong> Which is the correct sentence?</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) I go jogging in always the morning.</button>
-        <button onclick="checkAnswer(this,'b')">b) I always go jogging in the morning.</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b<br>Explanation: Word order सही है।</p>
-    </div>
-
-    <!-- Q24 -->
-    <div class="question-card">
-      <p><strong>Q24.</strong> Which is the correct sentence?</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) I always eat vegetables and fruits.</button>
-        <button onclick="checkAnswer(this,'a')">b) Eat vegetables and always fruits.</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a<br>Explanation: सही grammar।</p>
-    </div>
-
-    <!-- Q25 -->
-    <div class="question-card">
-      <p><strong>Q25.</strong> ....... Big building over there is the parliament.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) This</button>
-        <button onclick="checkAnswer(this,'b')">b) That</button>
-        <button onclick="checkAnswer(this,'b')">c) These</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) That<br>Explanation: दूर की वस्तु के लिए “that”।</p>
-    </div>
-
-    <!-- Q26 -->
-    <div class="question-card">
-      <p><strong>Q26.</strong> Don’t ........ football in the yard.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Play</button>
-        <button onclick="checkAnswer(this,'a')">b) Plays</button>
-        <button onclick="checkAnswer(this,'a')">c) Played</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Play<br>Explanation: Order/imperative में base verb आता है।</p>
-    </div>
-
-    <!-- Q27 -->
-    <div class="question-card">
-      <p><strong>Q27.</strong> Please visit our website for.... Details.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Most</button>
-        <button onclick="checkAnswer(this,'c')">b) Many</button>
-        <button onclick="checkAnswer(this,'c')">c) More</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) More<br>Explanation: Phrase “for more details” correct है।</p>
-    </div>
-
-    <!-- Q28 -->
-    <div class="question-card">
-      <p><strong>Q28.</strong> My son ...... a video game for his birthday.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Likes</button>
-        <button onclick="checkAnswer(this,'b')">b) Would like</button>
-        <button onclick="checkAnswer(this,'b')">c) Like</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Would like<br>Explanation: इच्छा → “would like”।</p>
-    </div>
-
-    <!-- Q29 -->
-    <div class="question-card">
-      <p><strong>Q29.</strong> Anita .... Tennis very well.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Play</button>
-        <button onclick="checkAnswer(this,'b')">b) Plays</button>
-        <button onclick="checkAnswer(this,'b')">c) Played</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Plays<br>Explanation: Singular subject (Anita) → “plays”।</p>
-    </div>
-
-    <!-- Q30 -->
-    <div class="question-card">
-      <p><strong>Q30.</strong> I ..... Lions and Tigers very much.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Like</button>
-        <button onclick="checkAnswer(this,'a')">b) Would like</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Like<br>Explanation: Habit बताने के लिए simple present “like”।</p>
-    </div>
-
-  </div>
-</section<section id="cls-mock-test-set4" style="padding:50px 0; background:#f9f9f9;">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:40px; color:#17A2B8;">📘 BS-CLS KYP Final Exam – Mock Test (Set 4)</h2>
-
-    <!-- Q31 -->
-    <div class="question-card">
-      <p><strong>Q31.</strong> The Olympic games ..... place every four year.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Taking</button>
-        <button onclick="checkAnswer(this,'b')">b) Take</button>
-        <button onclick="checkAnswer(this,'b')">c) Takes</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Take<br>Explanation: Subject plural “games” → verb plural “take”।</p>
-    </div>
-
-    <!-- Q32 -->
-    <div class="question-card">
-      <p><strong>Q32.</strong> Are ......... your pencils in this box.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) These</button>
-        <button onclick="checkAnswer(this,'a')">b) This</button>
-        <button onclick="checkAnswer(this,'a')">c) That</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) These<br>Explanation: Plural objects → “these”।</p>
-    </div>
-
-    <!-- Q33 -->
-    <div class="question-card">
-      <p><strong>Q33.</strong> They ... to buy a house but they haven’t got enough money.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Would like</button>
-        <button onclick="checkAnswer(this,'a')">b) Like</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Would like<br>Explanation: इच्छा → “would like”।</p>
-    </div>
-
-    <!-- Q34 -->
-    <div class="question-card">
-      <p><strong>Q34.</strong> She has never....... Something like that before.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Done</button>
-        <button onclick="checkAnswer(this,'a')">b) Doing</button>
-        <button onclick="checkAnswer(this,'a')">c) Did</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Done<br>Explanation: Present perfect → “has never done”।</p>
-    </div>
-
-    <!-- Q35 -->
-    <div class="question-card">
-      <p><strong>Q35.</strong> ........ up stairs.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Going</button>
-        <button onclick="checkAnswer(this,'c')">b) Gone</button>
-        <button onclick="checkAnswer(this,'c')">c) Go</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) Go<br>Explanation: Order/imperative → base verb।</p>
-    </div>
-
-    <!-- Q36 -->
-    <div class="question-card">
-      <p><strong>Q36.</strong> Don’t ....... In this lake.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Swimming</button>
-        <button onclick="checkAnswer(this,'b')">b) Swim</button>
-        <button onclick="checkAnswer(this,'b')">c) Swims</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Swim<br>Explanation: Imperative negative में base verb।</p>
-    </div>
-
-    <!-- Q37 -->
-    <div class="question-card">
-      <p><strong>Q37.</strong> I ..... to have a car.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Would like</button>
-        <button onclick="checkAnswer(this,'a')">b) Like</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Would like<br>Explanation: इच्छा व्यक्त करने के लिए।</p>
-    </div>
-
-    <!-- Q38 -->
-    <div class="question-card">
-      <p><strong>Q38.</strong> They ..... a cat and dog.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Have</button>
-        <button onclick="checkAnswer(this,'a')">b) Has</button>
-        <button onclick="checkAnswer(this,'a')">c) Having</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Have<br>Explanation: Plural subject → plural verb।</p>
-    </div>
-
-    <!-- Q39 -->
-    <div class="question-card">
-      <p><strong>Q39.</strong> Mike ...... children very much.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Would like</button>
-        <button onclick="checkAnswer(this,'b')">b) Likes</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Likes<br>Explanation: Singular subject → verb में “-s” लगता है।</p>
-    </div>
-
-    <!-- Q40 -->
-    <div class="question-card">
-      <p><strong>Q40.</strong> She ...... playing tennis.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Would like</button>
-        <button onclick="checkAnswer(this,'b')">b) Likes</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Likes<br>Explanation: Habit दिखाने के लिए present simple।</p>
-    </div>
-
-  </div>
-</section<section id="cls-mock-test-set5" style="padding:50px 0; background:#f1f1f1;">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:40px; color:#DC3545;">📘 BS-CLS KYP Final Exam – Mock Test (Set 5)</h2>
-
-    <!-- Q41 -->
-    <div class="question-card">
-      <p><strong>Q41.</strong> Don’t ..... late for school.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Is</button>
-        <button onclick="checkAnswer(this,'c')">b) Am</button>
-        <button onclick="checkAnswer(this,'c')">c) Be</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) Be<br>Explanation: Correct imperative → “Don’t be late.”</p>
-    </div>
-
-    <!-- Q42 -->
-    <div class="question-card">
-      <p><strong>Q42.</strong> I never ........ Coffee.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Drinks</button>
-        <button onclick="checkAnswer(this,'b')">b) Drink</button>
-        <button onclick="checkAnswer(this,'b')">c) Drinking</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Drink<br>Explanation: Subject “I” → base verb।</p>
-    </div>
-
-    <!-- Q43 -->
-    <div class="question-card">
-      <p><strong>Q43.</strong> What .... You do every Sunday?</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Do</button>
-        <button onclick="checkAnswer(this,'a')">b) Did</button>
-        <button onclick="checkAnswer(this,'a')">c) Does</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Do<br>Explanation: Present simple question।</p>
-    </div>
-
-    <!-- Q44 -->
-    <div class="question-card">
-      <p><strong>Q44.</strong> You should not ....... Called him a fool.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Has</button>
-        <button onclick="checkAnswer(this,'b')">b) Have</button>
-        <button onclick="checkAnswer(this,'b')">c) Having</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Have<br>Explanation: “Should not have called” correct है।</p>
-    </div>
-
-    <!-- Q45 -->
-    <div class="question-card">
-      <p><strong>Q45.</strong> Don’t .......... Football in the yard.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Play</button>
-        <button onclick="checkAnswer(this,'a')">b) Plays</button>
-        <button onclick="checkAnswer(this,'a')">c) Played</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Play</p>
-    </div>
-
-    <!-- Q46 -->
-    <div class="question-card">
-      <p><strong>Q46.</strong> Ann ...... to work for this company.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Would like</button>
-        <button onclick="checkAnswer(this,'a')">b) Likes</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Would like<br>Explanation: इच्छा व्यक्त करने के लिए।</p>
-    </div>
-
-    <!-- Q47 -->
-    <div class="question-card">
-      <p><strong>Q47.</strong> I .... To eat a pizza tonight.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Like</button>
-        <button onclick="checkAnswer(this,'b')">b) Would like</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Would like</p>
-    </div>
-
-    <!-- Q48 -->
-    <div class="question-card">
-      <p><strong>Q48.</strong> Bad driving ........ many accidents.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Causing</button>
-        <button onclick="checkAnswer(this,'b')">b) Causes</button>
-        <button onclick="checkAnswer(this,'b')">c) Cause</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Causes<br>Explanation: Singular subject → verb singular।</p>
-    </div>
-
-    <!-- Q49 -->
-    <div class="question-card">
-      <p><strong>Q49.</strong> It ..... at 9:00 in the evening.</p>
-      <div>
-        <button onclick="checkAnswer(this,'a')">a) Closes</button>
-        <button onclick="checkAnswer(this,'a')">b) Close</button>
-        <button onclick="checkAnswer(this,'a')">c) Closing</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: a) Closes</p>
-    </div>
-
-    <!-- Q50 -->
-    <div class="question-card">
-      <p><strong>Q50.</strong> ..... your teeth.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Brushing</button>
-        <button onclick="checkAnswer(this,'b')">b) Brush</button>
-        <button onclick="checkAnswer(this,'b')">c) Brushed</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Brush<br>Explanation: Order/imperative → base verb।</p>
-    </div>
-
-  </div>
-</section<section id="cls-mock-test-set6" style="padding:50px 0; background:#f9f9f9;">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom:40px; color:#6F42C1;">📘 BS-CLS KYP Final Exam – Mock Test (Set 6)</h2>
-
-    <!-- Q51 -->
-    <div class="question-card">
-      <p><strong>Q51.</strong> Anita ....... Tennis very well.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Play</button>
-        <button onclick="checkAnswer(this,'c')">b) Played</button>
-        <button onclick="checkAnswer(this,'c')">c) Plays</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) Plays</p>
-    </div>
-
-    <!-- Q52 -->
-    <div class="question-card">
-      <p><strong>Q52.</strong> I .... Hungry.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Are</button>
-        <button onclick="checkAnswer(this,'b')">b) Am</button>
-        <button onclick="checkAnswer(this,'b')">c) Be</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Am</p>
-    </div>
-
-    <!-- Q53 -->
-    <div class="question-card">
-      <p><strong>Q53.</strong> You ......... the wrong dress for the interview.</p>
-      <div>
-        <button onclick="checkAnswer(this,'c')">a) Choose</button>
-        <button onclick="checkAnswer(this,'c')">b) Choosen</button>
-        <button onclick="checkAnswer(this,'c')">c) Chose</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: c) Chose<br>Explanation: Past tense of “choose” = chose।</p>
-    </div>
-
-    <!-- Q54 -->
-    <div class="question-card">
-      <p><strong>Q54.</strong> My students .............. a little English.</p>
-      <div>
-        <button onclick="checkAnswer(this,'b')">a) Spoken</button>
-        <button onclick="checkAnswer(this,'b')">b) Speak</button>
-        <button onclick="checkAnswer(this,'b')">c) Speaks</button>
-      </div>
-      <p class="explanation" style="display:none;">✅ Correct Answer: b) Speak<br>Explanation: Plural subject → plural verb।</p>
-    </div>
-
+  btn.parentElement.parentElement.querySelector(".explanation").style.display
     <!-- Q55 -->
     <div class="question-card">
           <li>BS-CSS</li>
